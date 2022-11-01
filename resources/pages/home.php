@@ -14,10 +14,8 @@
 			require_once '../php_scripts/connect.php';
 			session_start();
 			
-			//echo $_SESSION['animal'];
 			if(!empty($_SESSION['logged_user'])){
 				$current_user = $_SESSION['logged_user'];
-				//echo "<h2>Hello " . $current_user . "</h2>";
 			}
 
 			mysqli_select_db($conn, $dbname);
@@ -49,26 +47,22 @@
 			<div class="slideshow-container">
 
 			<div class="mySlides fade">
-			  <!-- <div class="numbertext">1 / 4</div> -->
-			  <img src="../db_images/art_1.jpg" style="width:100%">
+			  <img src="../images/slide1.jpg" style="width:100%">
 			  <div class="text">Crash Lands</div>
 			</div>
 
 			<div class="mySlides fade">
-			  <!-- <div class="numbertext">2 / 4</div> -->
-			  <img src="../db_images/art_2.jpg" style="width:100%">
+			  <img src="../images/slide2.jpg" style="width:100%">
 			  <div class="text">Desert Valley</div>
 			</div>
 
 			<div class="mySlides fade">
-			  <!-- <div class="numbertext">3 / 4</div> -->
-			  <img src="../db_images/art_7.jpg" style="width:100%">
+			  <img src="../images/slide3.jpg" style="width:100%">
 			  <div class="text">Mountains</div>
 			</div>
 
 			<div class="mySlides fade">
-			  <!-- <div class="numbertext">4 / 4</div> -->
-			  <img src="../db_images/art_8.jpg" style="width:100%">
+			  <img src="../images/slide4.jpg" style="width:100%">
 			  <div class="text">Retro Planet</div>
 			</div>
 
