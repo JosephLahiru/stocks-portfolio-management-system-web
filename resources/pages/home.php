@@ -54,7 +54,7 @@
 
 			while($data = mysqli_fetch_assoc($res)){
 				echo "<div class=\"mySlides fade\">";
-				echo "<img src=\"../images/slide" . $data['product_id'] . ".jpg\" style=\"width:100%\">";
+				echo "<img src=\"../images/slide" . $data['product_id'] . ".png\" style=\"width:100%\">";
 				echo "<div class=\"text\">" . $data['product_name'] . "</div>";
 				echo "</div>";
 			}
