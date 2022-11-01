@@ -84,7 +84,7 @@
 				}
 				else{
 
-					$sql = "INSERT INTO user (firstName, lastName, address, telNo, email, password) VALUES ('" . $_POST['fname'] . "', '" . $_POST['lname'] . "', '" . $_POST['address'] . "', '" . $_POST['cnumber'] . "', '" . $_POST['email'] . "', '" . $_POST['pwd'] . "');";
+					$sql = "INSERT INTO customer (firstName, lastName, address, telNo, email, password) VALUES ('" . $_POST['fname'] . "', '" . $_POST['lname'] . "', '" . $_POST['address'] . "', '" . $_POST['cnumber'] . "', '" . $_POST['email'] . "', '" . $_POST['pwd'] . "');";
 
 					if ($conn->query($sql) === TRUE) {
 					  echo "New record created successfully";

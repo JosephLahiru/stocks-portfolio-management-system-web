@@ -54,10 +54,7 @@
 			                <input type="email" name="email" id="email" placeholder="Enter your email">
 
 			                <label for="password">Password</label>
-			                <input type="password" name="pwd" id="password" placeholder="Enter your password"> <br>
-
-							Admin Login
-			               	<input type="checkbox" id="checkbox-1-1" class="custom-checkbox" name="admin" value="checked" /> 
+			                <input type="password" name="pwd" id="password" placeholder="Enter your password"> 
 
 			                <input type="submit" value="Log In" name="submit">
 
@@ -78,13 +75,7 @@
 						echo "<br><div class='other' align='center'>Please Fill All The fields !!!</div>";
 					}
 					else{
-						if(isset($_POST['admin'])){
-							if($_POST['admin']=="checked"){
-								$sql = "SELECT * FROM `admin`";
-							}
-						}else{
-							$sql = "SELECT * FROM `user`";
-						}
+						$sql = "SELECT * FROM customer";
 						$result = mysqli_query($conn, $sql);
 						$check = mysqli_num_rows($result);
 						if($check > 0){
@@ -98,11 +89,7 @@
 									$_SESSION['user_id'] = $logged_user_id;
 									echo "<br>The logged in user is " . $data['firstname'];
 									sleep(1);
-									if($data['type'] == "admin"){
-										header( 'Location: admin/admin.php' );
-									}else{
-										header( 'Location: home.php' );
-									}
+									header( 'Location: home.php' );
 									$found = 1;
 									break;
 								}
