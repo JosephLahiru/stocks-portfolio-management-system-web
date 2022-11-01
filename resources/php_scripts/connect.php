@@ -4,10 +4,10 @@
 		// $password = "AoftCt2dOD9P";
 		// $dbname = "clapde83_mini_project";
 
-		$servername = "localhost";
+		$servername = "152.70.158.151";
 		$username = "root";
-		$password = "";
-		$dbname = "ICT2153";
+		$password = "amres";
+		$dbname = "spms";
 
 		// $servername ="remotemysql.com";
 		// $username = "FOvR1vFoHu";

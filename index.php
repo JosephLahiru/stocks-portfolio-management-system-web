@@ -76,7 +76,7 @@
 
 		<?php require_once 'resources/php_scripts/connect.php';
 
-		$db_check_sql = "SHOW DATABASES LIKE 'ict2153';";
+		$db_check_sql = "SHOW DATABASES LIKE 'spms';";
 
 		$db_check_result = mysqli_query($conn, $db_check_sql);
 
