@@ -44,7 +44,7 @@
 	</head>
 	<body>
 		<div class="main">
-			<h1 align="center" style="font-family: 'Cinzel', serif; font-size: 50px;">Welcome To Millanium Art Gallery</h1>
+			<h1 align="center" style="font-family: 'Cinzel', serif; font-size: 50px;">Welcome To Stocks Portfolio<br>Management System</h1>
 
 			<div class="slideshow-container">
 
