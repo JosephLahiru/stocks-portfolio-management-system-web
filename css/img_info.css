@@ -1,0 +1,14 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  font-family: 'Courier New', monospace;
+  color: white;
+  text-align: center;
+}
+
+.txt {
+  font-family: verdana;
+  font-size: 18px;
+}

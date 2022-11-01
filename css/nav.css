@@ -1,0 +1,51 @@
+.topnav {
+  background-color: rgba(64, 64, 64, 0.80);
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  left: 0;
+  z-index: 99;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgba(64, 64, 64, 0.80);
+  color: #66ff66;
+}
+
+.main{
+  margin-top: 60px;
+}
+
+.logo{
+  width: 149px;
+  height: auto;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.topnav .none{
+  all:revert;
+}
+
+.topnav .none:hover {
+  all:revert;
+}

@@ -1,0 +1,6 @@
+body {font-family: Verdana, sans-serif;
+  color: #f2f2f0;
+  /*background-color: #56385a;*/
+  background-image: url("../images/cover.png");
+  background-attachment: fixed;
+}
