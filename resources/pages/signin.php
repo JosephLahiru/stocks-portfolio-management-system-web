@@ -24,7 +24,7 @@
 		    <div class="main-container">
 		        <div class="form-container">
 		            <div class="form-body">
-		                <h1 class="title">Sign  In</h1><br>
+		                <h1 class="title">Create An Account</h1><br>
 
 		                <form action="" class="the-form" method="POST">
 						
@@ -37,19 +37,16 @@
 		                    <label for="email">Email:</label>
 		                    <input type="email" name="email" id="email" placeholder="Enter your email">
 							
+							<label for="email">Contact Number:</label>
+		                    <input type="text" name="cnumber" id="cnumber" placeholder="Enter your contact number">
+							
 							<label for="address">Address:</label>
 		                    <input type="textarea" name="address" id="address" placeholder="Enter your address">
-							
-							<label for="usertype">User Type:</label>
-							<select name="type"class="text" id="usertype">
-		                        <option>user</option>
-		                        <option>artist</option>
-							</select>
 
 		                    <label for="password">Password:</label>
 		                    <input type="password" name="pwd" id="pwd" placeholder="Enter your password">
 
-		                    <input type="submit" value="Sign In" name="submit">
+		                    <input type="submit" value="Register" name="submit">
 
 		                </form>
 
@@ -61,7 +58,7 @@
 		<?php
 			if(isset($_POST['submit'])){
 
-				if(empty($_POST['fname']) && empty($_POST['lname']) && empty($_POST['email']) && empty($_POST['pwd']) && empty($_POST['address'])){
+				if(empty($_POST['fname']) && empty($_POST['lname']) && empty($_POST['email']) && empty($_POST['pwd']) && empty($_POST['address']) && empty($_POST['cnumber'])){
 					echo "<br><div class='other' align='center'>Please fill all the fields !!</div>";
 				}
 				else if(empty($_POST['fname'])){
@@ -82,9 +79,12 @@
 				else if(empty($_POST['address'])){
 					echo "<br><div class='other' align='center'>Please enter your address !!</div>";
 				}
+				else if(empty($_POST['cnumber'])){
+					echo "<br><div class='other' align='center'>Please enter your contact number !!</div>";
+				}
 				else{
 
-					$sql = "INSERT INTO user (firstname, lastname, gmail, password, address, type) VALUES ('" . $_POST['fname'] . "', '" . $_POST['lname'] . "', '" . $_POST['email'] . "', '" . $_POST['pwd'] . "', '" . $_POST['address'] . "', '" . $_POST['type'] . "');";
+					$sql = "INSERT INTO user (firstName, lastName, address, telNo, email, password) VALUES ('" . $_POST['fname'] . "', '" . $_POST['lname'] . "', '" . $_POST['address'] . "', '" . $_POST['cnumber'] . "', '" . $_POST['email'] . "', '" . $_POST['pwd'] . "');";
 
 					if ($conn->query($sql) === TRUE) {
 					  echo "New record created successfully";
