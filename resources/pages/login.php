@@ -80,9 +80,9 @@
 						$check = mysqli_num_rows($result);
 						if($check > 0){
 							while($data= mysqli_fetch_assoc($result)){
-								if($data["gmail"] == $_POST['email'] && $data["password"] == $_POST['pwd']){
-									$logged_user = $data['firstname'];
-									$logged_user_id = $data['id'];
+								if($data["email"] == $_POST['email'] && $data["password"] == $_POST['pwd']){
+									$logged_user = $data['firstName'];
+									$logged_user_id = $data['custID'];
 									//$_SESSION['varname'] = $var_value;
 
 									$_SESSION['logged_user'] = $logged_user;
