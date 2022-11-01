@@ -24,7 +24,7 @@
 			if(empty($_SESSION['logged_user'])){	
 				echo "<a href='signin.php'>Sign in</a>";
 				echo "<a href='login.php'>Login</a>";
-				echo "<a href='art_gallery.php'>Gallery</a>";
+				echo "<a href='products.php'>Products</a>";
 				echo "<a class='active' href='home.php'>Home</a>";
 				echo "<a href='home.php' class='none'><img src='../images/logo.png' class='logo'></a>";
 
@@ -32,7 +32,7 @@
 				echo "<a href='logout.php'>Logout</a>";
 				echo "<a href='user_account.php'>Hello " . $current_user . "!</a>";
 				echo "<a href='user_account.php'>Account</a>";
-				echo "<a href='art_gallery.php'>Gallery</a>";
+				echo "<a href='products.php'>Products</a>";
 				echo "<a class='active' href='home.php'>Home</a>";
 				echo "<a href='home.php' class='none'><img src='../images/logo.png' class='logo'></a>";
 			}
@@ -46,26 +46,20 @@
 
 			<div class="slideshow-container">
 
-			<div class="mySlides fade">
-			  <img src="../images/slide1.jpg" style="width:100%">
-			  <div class="text">Crash Lands</div>
-			</div>
+			<?php
 
-			<div class="mySlides fade">
-			  <img src="../images/slide2.jpg" style="width:100%">
-			  <div class="text">Desert Valley</div>
-			</div>
+			$sql = "SELECT * FROM `product`";
 
-			<div class="mySlides fade">
-			  <img src="../images/slide3.jpg" style="width:100%">
-			  <div class="text">Mountains</div>
-			</div>
+			$res = mysqli_query($conn, $sql);
 
-			<div class="mySlides fade">
-			  <img src="../images/slide4.jpg" style="width:100%">
-			  <div class="text">Retro Planet</div>
-			</div>
+			while($data = mysqli_fetch_assoc($res)){
+				echo "<div class=\"mySlides fade\">";
+				echo "<img src=\"../images/slide" . $data['product_id'] . ".jpg\" style=\"width:100%\">";
+				echo "<div class=\"text\">" . $data['product_name'] . "</div>";
+				echo "</div>";
+			}
 
+			?>
 			</div>
 			<br>
 
