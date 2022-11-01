@@ -3,15 +3,15 @@
 	<head>
 		<title>Home</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="../css/main.css">
-		<link rel="stylesheet" type="text/css" href="../css/nav.css">
-		<link rel="stylesheet" type="text/css" href="../css/slideshow.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/nav.css">
+		<link rel="stylesheet" type="text/css" href="css/slideshow.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 		
 		<?php
-			require_once '../php_scripts/connect.php';
+			require_once 'php_scripts/connect.php';
 			session_start();
 			
 			//echo $_SESSION['animal'];
@@ -28,7 +28,7 @@
 				echo "<a href='login.php'>Login</a>";
 				echo "<a href='art_gallery.php'>Gallery</a>";
 				echo "<a class='active' href='home.php'>Home</a>";
-				echo "<a href='home.php' class='none'><img src='../images/logo.png' class='logo'></a>";
+				echo "<a href='home.php' class='none'><img src='images/logo.png' class='logo'></a>";
 
 			}else{
 				echo "<a href='logout.php'>Logout</a>";
@@ -36,7 +36,7 @@
 				echo "<a href='user_account.php'>Account</a>";
 				echo "<a href='art_gallery.php'>Gallery</a>";
 				echo "<a class='active' href='home.php'>Home</a>";
-				echo "<a href='home.php' class='none'><img src='../images/logo.png' class='logo'></a>";
+				echo "<a href='home.php' class='none'><img src='images/logo.png' class='logo'></a>";
 			}
 
 			echo "</div>";
@@ -139,6 +139,6 @@
 			}
 		</script>
 
-		<?php require_once '../php_scripts/footer.php'; ?>
+		<?php require_once 'php_scripts/footer.php'; ?>
 	</body>
 </html>
