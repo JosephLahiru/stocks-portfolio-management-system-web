@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MILLANIUM</title>
+		<title>SPMS</title>
 
 		<style type="text/css">
 			body{
@@ -87,7 +87,7 @@
 				echo "<style>.warning{display:none;}</style>";
 				echo "<meta http-equiv='refresh' content='3; URL=resources/pages/home.php'>";
 			}else{
-				echo "<div class='error'>ICT2153 DATABASE NOT FOUND<br>PLEASE USE THE create_db.php FILE TO SETUP THE DATABASE.</div>";
+				echo "<div class='error'>SPMS DATABASE NOT FOUND<br>PLEASE USE THE create_db.php FILE TO SETUP THE DATABASE.</div>";
 				echo "<br><div align='center'><button class='setup_button' onclick=\"window.location.href='resources/pages/create_db.php';\" style='width:160px; margin-right:5px'>Setup Database</button>";
 				echo "<button class='continue_button' onclick=\"window.location.href='resources/pages/home.php';\" style='width:190px'>Continue Anyway</button></div>";
 				echo "<style>.loader{display:none;} .spacing{height: 430px;}</style>";
@@ -102,7 +102,6 @@
 	</head>
 	<body>
 		<br><br><br>
-		<!-- <h1 align="center">MILLANIUM ART GALLERY</h1> -->
 		<div class="spacing"></div>
 		<div align="center">
 			<div class="loader"></div>
