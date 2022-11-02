@@ -46,6 +46,10 @@
 
 </head>
 <body>
+	<br>
+	<h1 align="center" style="font-family: 'Cinzel', serif; font-size: 60px;">Products</h1>
+	<br>
+
 	<div class="container">
 
 	  <div class="row">
@@ -63,7 +67,7 @@
 		    echo "<a href=\"#\"><img class=\"card-img-top\" src=\"../images/slide" . $data['product_id'] . ".png\" alt=\"\"></a>";
 		    echo "<div class=\"card-body\">";
 		    echo "<h4 class=\"card-title\">";
-		    echo "<a href=\"#\">" . $data['product_name'] . "</a>";
+		    echo "<a href=\"view_product.php?id=" . $data['product_id'] . "\">" . $data['product_name'] . "</a>";
 		    echo "</h4>";
 		    echo "<h5>Rs. " . $data['product_price'] . "</h5>";
 		    echo "<p class=\"card-text\">" . $data['product_description'] . "</p>";
