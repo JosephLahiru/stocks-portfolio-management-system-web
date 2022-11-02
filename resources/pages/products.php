@@ -59,18 +59,18 @@
 		while($data = mysqli_fetch_assoc($res)){
 
 		    echo "<div class=\"col-lg-4 col-md-6 mb-4\">";
-		    echo "<div class=\"card h-100\">";
+		    echo "<div class=\"card h-100\" style=\"background-color:#696969\">";
 		    echo "<a href=\"#\"><img class=\"card-img-top\" src=\"../images/slide" . $data['product_id'] . ".png\" alt=\"\"></a>";
 		    echo "<div class=\"card-body\">";
 		    echo "<h4 class=\"card-title\">";
 		    echo "<a href=\"#\">" . $data['product_name'] . "</a>";
 		    echo "</h4>";
-		    echo "<h5>$24.99</h5>";
+		    echo "<h5>Rs. " . $data['product_price'] . "</h5>";
 		    echo "<p class=\"card-text\">" . $data['product_description'] . "</p>";
 		    echo "</div>";
-		    echo "<div class=\"card-footer\">";
-		    echo "<small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>";
-		    echo "</div>";
+		    // echo "<div class=\"card-footer\">";
+		    // echo "<small class=\"text-muted\">&#9733; &#9733; &#9733; &#9733; &#9734;</small>";
+		    // echo "</div>";
 		    echo "</div>";
 		    echo "</div>";
 		}
