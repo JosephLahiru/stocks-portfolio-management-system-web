@@ -18,5 +18,5 @@
 <div class="spacing"></div>
 
 <div class="footer">
-  <div style="margin-top: 10px;">Millanium Art Gallery</div>
+  <div style="margin-top: 10px;">Stocks Portfolio Management System</div>
 </div>
