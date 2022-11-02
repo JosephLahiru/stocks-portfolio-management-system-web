@@ -88,16 +88,18 @@
 					<tr>
 						<td style="vertical-align: text-top;">
 							<p style="text-align: justify; padding: 5px;">
-								Millanium art gallery connects audiences and art, providing an extraordinary space where contemporary life and contemporary art connect, challenge, and inspire one another. We share, develop and conserve the  National Collection of Modern and Contemporary Art for now and for the future.
+								Stocks Portfolio Management system is an online platform that is designed to increase the throughput and efficiency of shop inventories.
 							</p>
 						</td>
 						<td style="vertical-align: text-top;">
 							<ul>
-								<li>We acknowledge and respect the legacy of the artist members who built this organization.</li>
-								<li>We believe the arts are essential to human existence.</li>
-								<li>We believe in the power of artists working cooperatively as a community for economic viability, support, feedback, and the nurturing of new ideas.</li>
-								<li>We believe in artistic excellence, innovation, and all forms of creative engagement.</li>
-								<li>We strive to support artists at all stages of their careers from diverse communities, artistic genres, and traditions.</li>
+								<li>Increase Material Availability.</li>
+								<li>Better Level of Customer Service.</li>
+								<li>Optimizing Product Sales.</li>
+								<li>Cost-Effective Storage.</li>
+								<li>Reducing Cost Value of Inventories.</li>
+								<li>Maintaining Sufficient Stock.</li>
+								<li>Keeping Wastage and Losses to a Minimum.</li>
 							</ul>
 						</td>
 					</tr>

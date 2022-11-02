@@ -28,16 +28,16 @@
 		if(empty($_SESSION['logged_user'])){	
 			echo "<a href='signin.php'>Sign in</a>";
 			echo "<a href='login.php'>Login</a>";
-			echo "<a href='products.php'>Products</a>";
-			echo "<a class='active' href='home.php'>Home</a>";
+			echo "<a class='active' href='products.php'>Products</a>";
+			echo "<a href='home.php'>Home</a>";
 			echo "<a href='home.php' class='none'><img src='../images/logo.png' class='logo'></a>";
 
 		}else{
 			echo "<a href='logout.php'>Logout</a>";
 			echo "<a href='user_account.php'>Hello " . $current_user . "!</a>";
 			echo "<a href='user_account.php'>Account</a>";
-			echo "<a href='products.php'>Products</a>";
-			echo "<a class='active' href='home.php'>Home</a>";
+			echo "<a class='active' href='products.php'>Products</a>";
+			echo "<a href='home.php'>Home</a>";
 			echo "<a href='home.php' class='none'><img src='../images/logo.png' class='logo'></a>";
 		}
 

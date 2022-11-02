@@ -12,7 +12,7 @@
 
 			echo "<div class='topnav'>";
 
-			echo "<a href='art_gallery.php'>Gallery</a>";
+			echo "<a href='products.php'>Products</a>";
 			echo "<a href='home.php'>Home</a>";
 			echo "<a href='home.php' class='none'><img src='../images/logo.png' class='logo'></a>";
 
