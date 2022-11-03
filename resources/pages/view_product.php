@@ -69,10 +69,22 @@
 						<br>
 						QTY : <input type="text" name="product_qty"><br>
 						<?php $_SESSION['buying_product'] = $_GET['id'];?>
-						<button onclick="window.open('payment_portal.php');" class="buy_button">Buy Now</button>
+						<input type="submit" name="buy" value="Buy Now" class="buy_button">
+						<!--<button onclick="window.open('payment_portal.php');" class="buy_button">Buy Now</button>-->
 					</div>
 				</form>
 			</div>
 		</div>
+
+		<?php
+			if(isset($_POST['buy'])){
+				if(!empty($_POST['product_qty'])){
+					$product_qty = $_POST['product_qty'];
+					echo "<script> window.location.replace('payment_portal.php?qty=$product_qty'); </script>";
+				}else{
+					echo "<script> alert('Please enter the product quantity'); </script>";
+				}
+			}
+		?>
 	</body>
 </html>
