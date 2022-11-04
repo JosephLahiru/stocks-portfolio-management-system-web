@@ -36,6 +36,15 @@
 			<h1>Comfirm Payment</h1>
 			<form action="" method="POST">
 			<?php
+				$id = $_SESSION['buying_id'];
+				$sql_product = "SELECT * FROM product WHERE product_id = $id";
+				$result_product = $conn->query($sql_product);
+
+				while($row = $result_product->fetch_assoc()){
+					$pname = $row['product_name'];
+					$pdiscription = $row['product_description'];
+				}
+
 				$user_id = $_SESSION['user_id'];
 				$quantity = $_SESSION['buying_qty'];
 				$amount = $_SESSION['buying_price'];
@@ -45,6 +54,10 @@
 				echo "<table id='user'>";
 				echo "<tr>";
 				echo "<td>Buyer ID</td><td>$user_id ($current_user)</td>";
+				echo "</tr><tr>";
+				echo "<td>Product Name</td><td>\$ $pname</td>";
+				echo "</tr><tr>";
+				echo "<td>Product Discruiption</td><td>\$ $pdiscription</td>";
 				echo "</tr><tr>";
 				echo "<td>Amount</td><td>\$ $total</td>";
 				echo "</tr><tr>";
@@ -60,11 +73,9 @@
 		<?php
 			if(isset($_POST['submit'])){
 
-				$sql_transaction = "INSERT INTO transaction(img_id, artist_id, user_id, amount) VALUES ($img_id, $artist_id, $user_id, $amount);";
-				$sql_update_owner = "UPDATE images SET owned = $user_id WHERE img_id=$img_id;";
+				$sql_transaction = "INSERT INTO transactions (cname, pname, discription, pquantity, total, ttype) VALUES ('$current_user', '$pname', '$pdiscription', '$quantity', '$total', 'SELL');";
 
 				$result_sql_transaction = $conn->query($sql_transaction);
-				$result_sql_update_owner = $conn->query($sql_update_owner);
 
 				if($result_sql_transaction){ 
 					$status = 'success';

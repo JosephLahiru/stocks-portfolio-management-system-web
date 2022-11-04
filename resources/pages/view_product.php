@@ -46,6 +46,7 @@
 						if($row['product_id'] == $_GET['id']){
 
 							$_SESSION['buying_price'] = $row['product_price'];
+							$_SESSION['buying_id'] = $row['product_id'];
 
 							echo "<h1 align='center'>" . $row['product_name'] . "</h1>";
 
