@@ -24,7 +24,7 @@
 			echo "<a href='user_account.php'>Hello " . $current_user . "!</a>";
 			echo "<a href='user_account.php'>Account</a>";
 			//echo "<a href='logout.php'>Logout</a>";
-			echo "<a href='art_gallery.php'>Gallery</a>";
+			echo "<a href='products.php'>Products</a>";
 			echo "<a href='home.php'>Home</a> </div>";
 
 			echo "</div>";
