@@ -80,6 +80,7 @@
 			if(isset($_POST['buy'])){
 				if(!empty($_POST['product_qty'])){
 					$product_qty = $_POST['product_qty'];
+					$_SESSION['buying_qty'] = $product_qty;
 					echo "<script> window.location.replace('payment_portal.php?qty=$product_qty'); </script>";
 				}else{
 					echo "<script> alert('Please enter the product quantity'); </script>";

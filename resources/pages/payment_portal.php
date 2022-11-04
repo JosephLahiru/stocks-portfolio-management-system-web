@@ -53,19 +53,17 @@
 
 					echo "<h2 class='topic'>Choose your Card to pay with</h2>";
 					echo "<table id='user' style='width:70%'>";
-					echo "<tr><th>Card ID</th><th>Added Date/Time</th><th>Card Name</th><th>Card Number</th><th>Choose</th></tr>";
+					echo "<tr><th>Card ID</th><th>Card Name</th><th>Card Number</th><th>Choose</th></tr>";
 
 					for($i=0; $i<$card_count; $i++){
 						$card_data = mysqli_fetch_assoc($result_cards);
 
 						$card_id = $card_data['card_id'];
-						$added_on = $card_data['added_time'];
 						$card_name = $card_data['card_name'];
 						$card_num = $card_data['card_number'];
 
 						echo "<tr>";
 						echo "<td>$card_id</td>";
-						echo "<td>$added_on</td>";
 						echo "<td>$card_name</td>";
 						echo "<td>$card_num</td>";
 						echo "<td><input type='radio' name='choose_card' value='$card_id'></td>";

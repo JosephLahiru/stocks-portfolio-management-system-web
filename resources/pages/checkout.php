@@ -19,11 +19,14 @@
 
 			echo "<div class='topnav'>";
 
-			echo "<a href='user_account.php'>Hello " . $current_user . "!</a>";
+			if(!empty($current_user)){
+				echo "<a href='user_account.php'>Hello " . $current_user . "!</a>";
+			}
 			echo "<a href='user_account.php'>Account</a>";
-			//echo "<a href='logout.php'>Logout</a>";
-			echo "<a href='art_gallery.php'>Gallery</a>";
-			echo "<a href='home.php'>Home</a> </div>";
+			echo "<a href='products.php'>Products</a>";
+			echo "<a href='home.php'>Home</a>";
+			echo "<a href='home.php' class='none'><product src='../images/logo.png' class='logo'></a>";
+			echo "</div>";
 
 			echo "</div>";
 		?>
@@ -33,23 +36,17 @@
 			<h1>Comfirm Payment</h1>
 			<form action="" method="POST">
 			<?php
-				$img_id = $_SESSION["buying_img"];
-				$artist_id = $_SESSION["buying_artist_id"];
-				$artist_name = $_SESSION['buying_artist_name'];
 				$user_id = $_SESSION['user_id'];
+				$quantity = $_SESSION['buying_qty'];
 				$amount = $_SESSION['buying_price'];
 				$card = $_SESSION['buying_card'];
-				$topic = $_SESSION['buying_image_topic'];
+				$total = $quantity * $amount;
 
 				echo "<table id='user'>";
 				echo "<tr>";
-				echo "<td>Image ID</td><td>$img_id ($topic)</td>";
-				echo "</tr><tr>";
-				echo "<td>Artist ID</td><td>$artist_id ($artist_name)</td>";
-				echo "</tr><tr>";
 				echo "<td>Buyer ID</td><td>$user_id ($current_user)</td>";
 				echo "</tr><tr>";
-				echo "<td>Amount</td><td>\$ $amount</td>";
+				echo "<td>Amount</td><td>\$ $total</td>";
 				echo "</tr><tr>";
 				echo "<td>Card ID</td><td>$card</td>";
 				echo "</tr>";
