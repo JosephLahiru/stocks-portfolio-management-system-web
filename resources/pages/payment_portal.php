@@ -14,6 +14,8 @@
 
 			if(!empty($_SESSION['logged_user'])){
 				$current_user = $_SESSION['logged_user'];
+			}else{
+				echo "<script> alert(\"Please Login First!!!\"); window.location.replace(\"products.php\"); </script>";
 			}
 			mysqli_select_db($conn, $dbname);
 
