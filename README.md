@@ -11,7 +11,7 @@
 ### Sign-In Page
 <img width="1440" alt="Sign in page" src="https://user-images.githubusercontent.com/44818405/210149046-aafaffb1-aebf-4f2d-8eb8-3469751d1b3d.png">
 
-### Profuct Page
+### Product Page
 <img width="1440" alt="Product Page" src="https://user-images.githubusercontent.com/44818405/210149045-00216fb8-925e-4aa4-b9dd-1de25635c77e.png">
 
 ### Customer Profile Page
